@@ -36,7 +36,7 @@ sRobot2 = {"id": 4, "name": "Swd2", "status": 0}
 robotList = []
 
 # ADD ROBOT HERE:
-# robotList.append(Robot(len(robotList), "test1", ROBOT_IP, ROBOT_PORT, VIDEO_STREAM))
+robotList.append(Robot(len(robotList), "test1", "ROBOT_IP", "ROBOT_PORT", "VIDEO_STREAM","1"))
 # robotList.append(vRobot1)
 # robotList.append(vRobot2)
 # robotList.append(sRobot1)
