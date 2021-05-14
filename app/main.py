@@ -10,8 +10,8 @@ from flask_cors import CORS, cross_origin
 from threading import Thread, currentThread
 import pickle
 import socket
-from app.robot import Robot
-from app.command import Command
+from robot import Robot
+from command import Command
 
 # ROBOT_IP = "127.0.0.1"
 # ROBOT_PORT = 65431
@@ -222,4 +222,11 @@ def socket_handler(robotList):
         print("Connected by", addr[0], addr[1])
         robotList.append(Robot(len(robotList), "test{}".format(count), addr[0], addr[1], VIDEO_STREAM, conn))
         count += 1
+
+if __name__ == "__main__":
+    app.debug = False
+    t_server = Thread(target=socket_handler, args=(robotList,))
+    t_server.daemon = True
+    t_server.start()
+    app.run()
 

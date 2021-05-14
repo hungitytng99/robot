@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/dalang/runestone2021-server"
+set -gx VIRTUAL_ENV "/mnt/c/Users/HungPC/Downloads/runestone2021-server/runestone2021-server"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
@@ -52,7 +52,7 @@ if test -z "$VIRTUAL_ENV_DISABLE_PROMPT"
         set -l old_status $status
 
         # Prompt override?
-        if test -n "(runestone2021-server) "
+        if test -n "(runestone2021-server) "            
             printf "%s%s" "(runestone2021-server) " (set_color normal)
         else
             # ...Otherwise, prepend env
