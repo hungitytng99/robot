@@ -214,7 +214,8 @@ def move():
 def socket_handler(robotList):
     count = 0
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.bind(("0.0.0.0", PORT))
+    # s.bind(("0.0.0.0", PORT))
+    s.bind(("runestone2021-server.herokuapp.com", PORT))
     s.listen()
     while True:
         conn, addr = s.accept()
